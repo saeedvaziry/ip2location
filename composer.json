@@ -1,0 +1,47 @@
+{
+    "name": "saeedvaziry/ip2location",
+    "description": "IP to Location database",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Saeed Vaziry",
+            "email": "mr.saeedvaziry@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^7.0|^8.0",
+        "illuminate/database": "^7.0|^8.0",
+        "ext-zip": "*",
+        "ip2location/ip2location-php": "^8.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0|^9.0",
+        "orchestra/testbench": "^5.0|^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "SaeedVaziry\\IP2Location\\": "src/"
+        },
+        "files": [
+            "src/Support/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SaeedVaziry\\IP2Location\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SaeedVaziry\\IP2Location\\IP2LocationServiceProvider"
+            ],
+            "aliases": {
+                "IP2Location": "SaeedVaziry\\IP2Location\\Facades\\IP2Location"
+            }
+        }
+    },
+    "prefer-stable": true
+}
