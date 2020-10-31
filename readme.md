@@ -25,13 +25,13 @@ You can also set a scheduler in your `app/Console/Kernel.php` to keep it up to d
 You can use `\SaeedVaziry\IP2Location\IP2Location` facade to access to all supported methods.
 
     // returns an array
-    \SaeedVaziry\IP2Location\IP2Location::info($ipAddress);
+    \SaeedVaziry\IP2Location\Facades\IP2Location::info($ipAddress);
     
     // returns the country full name
-    \SaeedVaziry\IP2Location\IP2Location::countryName($ipAddress);
+    \SaeedVaziry\IP2Location\Facades\IP2Location::countryName($ipAddress);
     
     // returns the country 2 character ISO code
-    \SaeedVaziry\IP2Location\IP2Location::countryCode($ipAddress);
+    \SaeedVaziry\IP2Location\Facades\IP2Location::countryCode($ipAddress);
    
 ### Helper functions
 
