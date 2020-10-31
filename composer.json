@@ -2,6 +2,9 @@
     "name": "saeedvaziry/ip2location",
     "description": "IP to Location database",
     "license": "MIT",
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
     "authors": [
         {
             "name": "Saeed Vaziry",
