@@ -23,7 +23,7 @@ You can also set a scheduler in your `app/Console/Kernel.php` to keep it up to d
 
 ### Facade
 
-You can use `\SaeedVaziry\IP2Location\IP2Location` facade to access to all supported methods.
+You can use `\SaeedVaziry\IP2Location\Facades\IP2Location` facade to access to all supported methods.
 
     // returns an array
     \SaeedVaziry\IP2Location\Facades\IP2Location::info($ipAddress);
