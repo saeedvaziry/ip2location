@@ -1,5 +1,6 @@
 # Laravel IP2Location Package
 
+[![](https://img.shields.io/packagist/v/saeedvaziry/ip2location.svg?style=flat-square)](https://packagist.org/packages/saeedvaziry/ip2location)
 ![](https://github.com/saeedvaziry/ip2location/workflows/Test/badge.svg)
 
 IP2Location is a small Laravel package that converts IPs to location.
