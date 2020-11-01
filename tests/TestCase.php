@@ -6,6 +6,7 @@ class TestCase extends \Orchestra\Testbench\TestCase
 {
     /**
      * @param \Illuminate\Foundation\Application $app
+     *
      * @return array|string[]
      */
     protected function getPackageProviders($app)
@@ -15,12 +16,13 @@ class TestCase extends \Orchestra\Testbench\TestCase
 
     /**
      * @param \Illuminate\Foundation\Application $app
+     *
      * @return array|string[]
      */
     protected function getPackageAliases($app)
     {
         return [
-            'IP2Location' => 'SaeedVaziry\IP2Location\Facades\IP2Location'
+            'IP2Location' => 'SaeedVaziry\IP2Location\Facades\IP2Location',
         ];
     }
 }

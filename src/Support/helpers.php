@@ -2,9 +2,10 @@
 
 if (!function_exists('ip2location_info')) {
     /**
-     * get ip2location info
+     * get ip2location info.
      *
      * @param null $ip
+     *
      * @return array
      */
     function ip2location_info($ip = null)
@@ -15,9 +16,10 @@ if (!function_exists('ip2location_info')) {
 
 if (!function_exists('ip2location_country_name')) {
     /**
-     * get ip2location country name
+     * get ip2location country name.
      *
      * @param null $ip
+     *
      * @return string
      */
     function ip2location_country_name($ip = null)
@@ -28,9 +30,10 @@ if (!function_exists('ip2location_country_name')) {
 
 if (!function_exists('ip2location_country_code')) {
     /**
-     * get ip2location country code
+     * get ip2location country code.
      *
      * @param null $ip
+     *
      * @return string
      */
     function ip2location_country_code($ip = null)
