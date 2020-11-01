@@ -26,7 +26,7 @@ class UpdateIPsCommand extends Command
     /**
      * @var string
      */
-    protected $dbPath = __DIR__ . '/../../database/bin';
+    protected $dbPath = __DIR__.'/../../database/bin';
 
     /**
      * Create a new command instance.
@@ -41,8 +41,9 @@ class UpdateIPsCommand extends Command
     /**
      * Execute the console command.
      *
-     * @return void
      * @throws Exception
+     *
+     * @return void
      */
     public function handle()
     {
@@ -80,22 +81,22 @@ class UpdateIPsCommand extends Command
 
         // extract file
         mkdir($this->dbPath);
-        file_put_contents($this->dbPath . '/db.zip', $file);
-        $zip = new ZipArchive;
-        if ($zip->open($this->dbPath . '/db.zip')) {
+        file_put_contents($this->dbPath.'/db.zip', $file);
+        $zip = new ZipArchive();
+        if ($zip->open($this->dbPath.'/db.zip')) {
             $zip->extractTo($this->dbPath);
             $zip->close();
         }
     }
 
     /**
-     * clean up
+     * clean up.
      */
     protected function cleanUp()
     {
         // delete zip file
-        if (file_exists($this->dbPath . '/db.zip')) {
-            File::delete($this->dbPath . '/db.zip');
+        if (file_exists($this->dbPath.'/db.zip')) {
+            File::delete($this->dbPath.'/db.zip');
         }
     }
 }

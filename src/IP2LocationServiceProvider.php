@@ -20,7 +20,7 @@ class IP2LocationServiceProvider extends ServiceProvider
         });
 
         // merge config file
-        $this->mergeConfigFrom(__DIR__ . '/../config/ip2location.php', 'ip2location');
+        $this->mergeConfigFrom(__DIR__.'/../config/ip2location.php', 'ip2location');
 
         // register command
         $this->app->singleton('command.ip2location.update', function () {
@@ -47,7 +47,7 @@ class IP2LocationServiceProvider extends ServiceProvider
     public function provides()
     {
         return [
-            'command.ip2location.update'
+            'command.ip2location.update',
         ];
     }
 }

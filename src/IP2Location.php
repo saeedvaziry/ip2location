@@ -20,7 +20,7 @@ class IP2Location
     public function __construct()
     {
         try {
-            $this->db = new Database(__DIR__ . '/../' . config('ip2location.db_path'), Database::FILE_IO);
+            $this->db = new Database(__DIR__.'/../'.config('ip2location.db_path'), Database::FILE_IO);
         } catch (\Exception $e) {
             throw new DatabaseNotFound();
         }
@@ -28,6 +28,7 @@ class IP2Location
 
     /**
      * @param null $ip
+     *
      * @return array|bool|mixed
      */
     public function info($ip = null)
@@ -75,6 +76,7 @@ class IP2Location
 
     /**
      * @param $ip
+     *
      * @return array|bool|mixed
      */
     protected function lookup($ip)

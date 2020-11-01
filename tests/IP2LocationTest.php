@@ -7,13 +7,13 @@ use SaeedVaziry\IP2Location\Facades\IP2Location;
 class IP2LocationTest extends TestCase
 {
     /**
-     * set up test case
+     * set up test case.
      */
     protected function setUp(): void
     {
         parent::setUp();
 
-        if (!file_exists(__DIR__ . '/../' . config('ip2location.db_path'))) {
+        if (!file_exists(__DIR__.'/../'.config('ip2location.db_path'))) {
             $this->artisan('ip2location:update');
         }
     }
@@ -35,7 +35,7 @@ class IP2LocationTest extends TestCase
     ];
 
     /**
-     * test ip info from request ip
+     * test ip info from request ip.
      */
     public function testInfoWithRequestIP()
     {
@@ -47,7 +47,7 @@ class IP2LocationTest extends TestCase
     }
 
     /**
-     * test country name
+     * test country name.
      *
      * it should return "-" because the request ip is 127.0.0.1
      */
@@ -59,7 +59,7 @@ class IP2LocationTest extends TestCase
     }
 
     /**
-     * test country code
+     * test country code.
      *
      * it should return "-" because the request ip is 127.0.0.1
      */
@@ -71,7 +71,7 @@ class IP2LocationTest extends TestCase
     }
 
     /**
-     * test ip info from manual ip
+     * test ip info from manual ip.
      */
     public function testInfoWithManualIP()
     {
@@ -83,7 +83,7 @@ class IP2LocationTest extends TestCase
     }
 
     /**
-     * test country name
+     * test country name.
      *
      * it should return the country name
      */
@@ -95,7 +95,7 @@ class IP2LocationTest extends TestCase
     }
 
     /**
-     * test country code
+     * test country code.
      *
      * it should return the country code
      */
