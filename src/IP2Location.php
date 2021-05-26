@@ -45,7 +45,7 @@ class IP2Location
     {
         $lookup = $this->lookup($ip);
 
-        return $lookup['countryCode'];
+        return $lookup && is_array($lookup) && isset($lookup['countryCode']) ? $lookup['countryCode'] : '-';
     }
 
     /**
@@ -57,7 +57,7 @@ class IP2Location
     {
         $lookup = $this->lookup($ip);
 
-        return $lookup['countryName'];
+        return $lookup && is_array($lookup) && isset($lookup['countryName']) ? $lookup['countryName'] : '-';
     }
 
     /**
