@@ -64,7 +64,18 @@ class UpdateIPsCommand extends Command
     {
         $this->info('Downloading new ip tables...');
 
-        return file_get_contents(config('ip2location.download_url'), false);
+        $arrContextOptions = [
+            "ssl" => [
+                "verify_peer" => false,
+                "verify_peer_name" => false,
+            ]
+        ];
+
+        return file_get_contents(
+            config('ip2location.download_url'),
+            false,
+            stream_context_create($arrContextOptions)
+        );
     }
 
     /**
