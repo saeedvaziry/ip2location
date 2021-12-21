@@ -65,10 +65,10 @@ class UpdateIPsCommand extends Command
         $this->info('Downloading new ip tables...');
 
         $arrContextOptions = [
-            "ssl" => [
-                "verify_peer" => false,
-                "verify_peer_name" => false,
-            ]
+            'ssl' => [
+                'verify_peer'      => false,
+                'verify_peer_name' => false,
+            ],
         ];
 
         return file_get_contents(
