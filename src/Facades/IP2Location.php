@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Facade;
  * Class IP2Location.
  *
  *
- * @method static array info($ip = null)
+ * @method static array  info($ip = null)
  * @method static string countryCode($ip = null)
  * @method static string countryName($ip = null)
  */
