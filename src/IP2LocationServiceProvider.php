@@ -26,6 +26,11 @@ class IP2LocationServiceProvider extends ServiceProvider
         $this->app->singleton('command.ip2location.update', function () {
             return new UpdateIPsCommand();
         });
+
+        // publish configs
+        $this->publishes([
+            __DIR__.'/../config/ip2location.php' => config_path('ip2location.php'),
+        ]);
     }
 
     /**
