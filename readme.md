@@ -10,9 +10,29 @@ IP2Location is a small Laravel package that converts IPs to location.
 This package is a wrapper to [IP2Location](https://github.com/chrislim2888/IP2Location-PHP-Module).
 
 ## Installation
+
 ```shell
 composer require saeedvaziry/ip2location
 ```
+## Configuration
+
+Publish configs with the following command
+
+```shell
+php artisan vendor:publish --provider="SaeedVaziry\IP2Location\IP2LocationServiceProvider"
+```
+
+Then modify `configs/ip2location.php` to set your download URL from IP2Location's website
+
+```php
+<?php
+
+return [
+    'db_path'      => 'database/bin/IP2LOCATION-LITE-DB1.BIN',
+    'download_url' => 'https://download.ip2location.com/lite/IP2LOCATION-LITE-DB1.BIN.ZIP',
+];
+```
+
 ## Updating IP database
 
 After the installation, you need to run the following command for updating the IP database.
